@@ -36,7 +36,11 @@ namespace slimeadventurres
 
         public static void UpdateLife(int damage)
         {
-            CurrentLife -= damage;
+            if (SlimeManager.AngleCounter < 1)
+            {
+                CurrentLife -= damage;
+            }
+
             CheckIfDead();
         }
 
